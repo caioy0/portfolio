@@ -5,7 +5,7 @@ import {
     ContextMenuTrigger,
 } from "@/components/ui/context-menu";
 
-export default function Header() {
+export default function Menu() {
     return (
         <div>
             <ContextMenu>
