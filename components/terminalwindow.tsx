@@ -1,19 +1,31 @@
-"use client";
-import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+"use client"
+
+import { motion } from "motion/react"
+import { useState, useEffect } from "react"
 
 interface TerminalWindowProps {
-    title: string;
-    children: React.ReactNode;
+    title: string
+    children: React.ReactNode
 }
 
-export function TerminalWindow({ title, children }: TerminalWindowProps) {
-    const [time, setTime] = useState(new Date());
+export function TerminalWindow({
+    title,
+    children,
+}: TerminalWindowProps) {
+
+    const [time, setTime] = useState("")
 
     useEffect(() => {
-        const interval = setInterval(() => setTime(new Date()), 1000);
-        return () => clearInterval(interval);
-    }, []);
+        const updateTime = () => {
+            setTime(new Date().toLocaleTimeString())
+        }
+
+        updateTime()
+
+        const interval = setInterval(updateTime, 1000)
+
+        return () => clearInterval(interval)
+    }, [])
 
     return (
         <motion.div
@@ -28,13 +40,20 @@ export function TerminalWindow({ title, children }: TerminalWindowProps) {
                         <div className="w-3 h-3 rounded-full bg-(--neon-yellow)" />
                         <div className="w-3 h-3 rounded-full bg-(--neon-green)" />
                     </div>
-                    <span className="text-(--neon-green)">{title}</span>
+
+                    <span className="text-(--neon-green)">
+                        {title}
+                    </span>
                 </div>
+
                 <span className="text-(--neon-green)/60 font-mono">
-                    {time.toLocaleTimeString()}
+                    {time}
                 </span>
             </div>
-            <div className="p-6 font-mono">{children}</div>
+
+            <div className="p-6 font-mono">
+                {children}
+            </div>
         </motion.div>
-    );
+    )
 }

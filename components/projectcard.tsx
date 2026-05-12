@@ -1,14 +1,15 @@
-import { motion } from "motion/react";
-import { GithubLogoIcon, LinkSimpleIcon } from "@phosphor-icons/react";
-import Image from "next/image";
+"use client"
+import { motion } from "motion/react"
+import { GithubLogoIcon, LinkSimpleIcon } from "@phosphor-icons/react"
+import Image from "next/image"
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    tech: string[];
-    image: string;
-    githubUrl?: string;
-    liveUrl?: string;
+    title: string
+    description: string
+    tech: string[]
+    image: string
+    githubUrl?: string
+    liveUrl?: string
 }
 
 export function ProjectCard({
@@ -33,6 +34,8 @@ export function ProjectCard({
             <div className="aspect-video overflow-hidden">
                 <Image
                     src={image}
+                    width={800}
+                    height={600}
                     alt={title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

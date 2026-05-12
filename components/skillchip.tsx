@@ -1,9 +1,9 @@
-"use client";
-import { motion } from "motion/react";
+"use client"
+import { motion } from "motion/react"
 
 interface SkillChipProps {
-    skill: string;
-    index: number;
+    skill: string
+    index: number
 }
 
 export function SkillChip({ skill, index }: SkillChipProps) {

@@ -1,22 +1,22 @@
-"use client";
-import { motion } from "motion/react";
-import { useState, useEffect } from "react";
+"use client"
+import { motion } from "motion/react"
+import { useState, useEffect } from "react"
 
 interface GlitchTextProps {
-    text: string;
-    className?: string;
+    text: string
+    className?: string
 }
 
 export function GlitchText({ text, className = "" }: GlitchTextProps) {
-    const [isGlitching, setIsGlitching] = useState(false);
+    const [isGlitching, setIsGlitching] = useState(false)
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setIsGlitching(true);
-            setTimeout(() => setIsGlitching(false), 200);
-        }, 3000);
+            setIsGlitching(true)
+            setTimeout(() => setIsGlitching(false), 200)
+        }, 3000)
 
-        return () => clearInterval(interval);
+        return () => clearInterval(interval)
     }, []);
 
     return (

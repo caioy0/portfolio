@@ -1,16 +1,9 @@
-export const skills = {
-    skills: [
-        {
-            skill: "yo",
-            index: 1,
-        },
-        {
-            skill: "React",
-            index: 2,
-        },
-        {
-            skill: "TypeScript",
-            index: 3,
-        },
-    ],
-};
+export const skillsData = [
+  "JavaScript", "TypeScript", "Python", "Rust", "C",   
+  "Linux", "Bash", "Java", "Zsh",
+  "React", "Next.js", "Vite.js", "Angular",
+  "Node.js", "Express", "SpringBoot",
+  "PostgreSQL", "MongoDB", "Elasticsearch",
+  "Docker", "AWS", "COBIT", "REST", "WebSocket", "ITIL",
+  "TensorFlow", "PyTorch", "ML", "AI", "Blockchain"
+];

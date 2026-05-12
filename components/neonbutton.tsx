@@ -1,12 +1,12 @@
-"use client";
-import { motion } from "motion/react";
-import { ReactNode } from "react";
+"use client"
+import { motion } from "motion/react"
+import { ReactNode } from "react"
 
 interface NeonButtonProps {
-    children: ReactNode;
-    onClick?: () => void;
+    children: ReactNode
+    onClick?: () => void
     variant?: "cyan" | "magenta" | "yellow";
-    className?: string;
+    className?: string
 }
 
 export function NeonButton({

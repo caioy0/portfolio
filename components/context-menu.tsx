@@ -3,7 +3,7 @@ import {
     ContextMenuContent,
     ContextMenuItem,
     ContextMenuTrigger,
-} from "@/components/ui/context-menu";
+} from "@/components/ui/context-menu"
 
 export default function Menu() {
     return (
@@ -18,5 +18,5 @@ export default function Menu() {
                 </ContextMenuContent>
             </ContextMenu>
         </div>
-    );
+    )
 }
